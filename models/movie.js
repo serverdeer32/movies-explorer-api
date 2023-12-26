@@ -47,7 +47,7 @@ const cardSchema = new mongoose.Schema({
     ref: 'user',
     required: true,
   },
-  movieId : {
+  movieId: {
     type: Number,
     required: [true, 'Поле должно быть заполнено'],
   },

@@ -2,6 +2,7 @@ const { HTTP_STATUS_OK, HTTP_STATUS_CREATED } = require('http2').constants;
 const { DocumentNotFoundError, ValidationError } = require('mongoose').Error;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
 const { SECRET_KEY = 'mega-secretniy-key' } = process.env;
 const User = require('../models/user');
 const BadRequestError = require('../errors/BadRequestError');
@@ -27,7 +28,7 @@ module.exports.editUserData = (req, res, next) => {
 };
 
 module.exports.addUser = (req, res, next) => {
-  const { name, email, password, } = req.body;
+  const { name, email, password } = req.body;
   bcrypt.hash(password, 10)
     .then((hash) => User.create({
       name, email, password: hash,
