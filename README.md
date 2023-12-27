@@ -6,6 +6,6 @@
 
 ## Ссылки на проект
 
-IP 158.160.132.247
+IP 158.160.139.13
 
 Backend https://api.movieexplorer.akzntsv.nomoredomainsmonster.ru
